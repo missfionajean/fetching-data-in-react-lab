@@ -10,14 +10,14 @@ const App = () => {
 	]);
 
 	return (
-		<>
+		<body>
 			<h1>Star Wars Battleship Racer</h1>
-			<p>Welcome! Please use the database below to add ships to the </p>
+			<p>Welcome! Please use the Starship Database on the left (powered by <a href="https://swapi.dev/">Star Wars API</a>) to search for ship info and set your racers. Check the Racing Calculator to the right for results! </p>
 			<div id="app">
 				<StarshipList racers={racers} setRacers={setRacers} />
 				<StarshipRacer racers={racers} />
 			</div>
-		</>
+		</body>
 	);
 };
 
