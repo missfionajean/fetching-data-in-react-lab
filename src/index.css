@@ -1,25 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Zen+Kaku+Gothic+New&display=swap");
+
 * {
 	box-sizing: border-box;
-    color: #FFE81F;
-    background-color: black;
+	color: #ffe81f;
+	background-color: black;
+	font-family: Zen Kaku Gothic New, sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #app {
-    display: flex;
+	display: flex;
+    gap: 15dvw;
 }
 
 #database {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 #race {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
