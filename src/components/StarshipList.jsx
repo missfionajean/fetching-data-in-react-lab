@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import StarshipCard from "./StarshipCard";
 import StarshipSearch from "./StarshipSearch";
 
-const StarshipList = () => {
+const StarshipList = ({ racers, setRacers }) => {
 	// functionality for displaying all ships
 	const [ships, setShips] = useState([]);
 
@@ -24,15 +24,25 @@ const StarshipList = () => {
 	}, []);
 
 	return (
-		<>
+		<div id="database">
 			<StarshipSearch setShips={setShips} />
 			<h2>Starships</h2>
-			<ul>
-				{ships.map((ship, index) => (
-					<StarshipCard ship={ship} key={index} />
-				))}
-			</ul>
-		</>
+			{ships.length ? (
+				ships.map((ship, index) => (
+					<StarshipCard
+						ship={ship}
+						key={index}
+						racers={racers}
+						setRacers={setRacers}
+					/>
+				))
+			) : (
+				<p>
+					No matching results. Check spelling or choose a new search
+					term.
+				</p>
+			)}
+		</div>
 	);
 };
 
